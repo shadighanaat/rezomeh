@@ -3,6 +3,27 @@ from django.contrib.auth import get_user_model
 
 from audioop import reverse
 
+class Home(models.Model):
+    FREELANCE_STATUS = [
+        ('available', 'Available'),
+        ('not_available', 'Not Available'),
+        ('busy', 'Busy'),
+    ]
+
+    name = models.CharField(max_length=155)
+    expertise = models.CharField(max_length=155)
+    Address = models.TextField()
+    phone_number = models.CharField(max_length=15)
+    email = models.EmailField(max_length=155)
+    freelance_status = models.CharField(
+        max_length=15,
+        choices=FREELANCE_STATUS,
+        default='not_available',
+    ) 
+
+    def __str__(self):
+        return f"Home by {self.name} on {self.freelance_status}"
+
 class AboutMe(models.Model):
     title = models.CharField(max_length=155)
     description = models.TextField()

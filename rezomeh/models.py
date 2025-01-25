@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 
 from audioop import reverse
 
@@ -10,15 +11,16 @@ class Home(models.Model):
         ('busy', 'Busy'),
     ]
 
-    name = models.CharField(max_length=155)
-    expertise = models.CharField(max_length=155)
-    Address = models.TextField()
-    phone_number = models.CharField(max_length=15)
-    email = models.EmailField(max_length=155)
+    name = models.CharField(max_length=155, verbose_name=_("name"))
+    expertise = models.CharField(max_length=155, verbose_name=_("expertise"))
+    Address = models.TextField(verbose_name=_("Address"))
+    phone_number = models.CharField(max_length=15, verbose_name=_("phone_number"))
+    email = models.EmailField(max_length=155, verbose_name=_("email"))
     freelance_status = models.CharField(
         max_length=15,
         choices=FREELANCE_STATUS,
         default='not_available',
+        verbose_name=_("freelance_status")
     ) 
 
     def __str__(self):

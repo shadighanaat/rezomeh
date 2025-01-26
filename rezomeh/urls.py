@@ -8,10 +8,11 @@ from .views import (AboutMeView,
                     HomeView, 
                     PortfolioDetailView, 
                     PortfolioView, 
-                    RezomehView
+                    RezomehView, switch_language
                     )
 
 urlpatterns = [
+    path('', HomeView.as_view(), name='home'),
     path('home/', HomeView.as_view(), name='home_list'),
     path('aboutme/', AboutMeView.as_view(), name='aboutme_list'),
     path('rezomeh/', RezomehView.as_view(), name='rezomeh_list'),
@@ -21,4 +22,5 @@ urlpatterns = [
     path('<int:pk>/', BlogDetailView.as_view(), name='blog_detail'),
     path('comment/<int:product_id>/', CommentCreateView.as_view(), name='comment_create'),
     path('contact/', ContactView.as_view(), name='contact_list'),
+    path('language/', switch_language, name='language'),
     ]

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 18:58+0330\n"
+"POT-Creation-Date: 2025-01-27 16:40+0330\n"
 "PO-Revision-Date: 2025-01-25 00:42-0600\n"
 "Last-Translator:   <shadighanaati@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,50 +19,135 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\rezomeh\models.py:14
+#: .\models.py:14
 msgid "name"
 msgstr "Name"
 
-#: .\rezomeh\models.py:15
+#: .\models.py:15
 msgid "expertise"
 msgstr ""
 
-#: .\rezomeh\models.py:16 .\rezomeh\templates\rezomeh\home_list.html:60
+#: .\models.py:16
 msgid "Address"
 msgstr "Address"
 
-#: .\rezomeh\models.py:17
+#: .\models.py:17
 msgid "phone_number"
 msgstr ""
 
-#: .\rezomeh\models.py:18
+#: .\models.py:18
 msgid "email"
 msgstr ""
 
-#: .\rezomeh\models.py:23
+#: .\models.py:23
 msgid "freelance_status"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\home_list.html:53
+#: .\templates\rezomeh\aboutme_list.html:6 .\templates\rezomeh\home_list.html:6
+msgid "aboutme"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:14
+msgid "About Me"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:15
+msgid "backend, Thinker, Creative Doer"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:26
+msgid "aboutme.title"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:27
+msgid "aboutme.description"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:36
+msgid "Testimonials"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:44
+msgid ""
+"Python Programming Certificate: (Coding course and school in 2023 and 2024)"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:56
+msgid "Django Framework Training: (Coding course and school in 2023 and 2024)"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:67
+msgid "Git Version Control: (Coding course and school in 2023 and 2024)"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:79
+msgid "Services"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:87
+msgid "Development and implementation of custom websites"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:88
+msgid "aboutme.description 1"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:97
+msgid "Implementation of online learning management systems (LMS)"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:98
+msgid "aboutme.description 2"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:107
+msgid "Online store design"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:108
+msgid "aboutme.description 3"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:117
+msgid "Launching and deploying projects"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:118
+msgid "aboutme.description 4"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:127
+msgid "Fun Facts"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:133
+msgid "Working Hours"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:134
+msgid "~2000+ hours spent on coding"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:141
+msgid "Coffee Consumed"
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:142
+msgid " ~500+ cups (and still counting ☕)"
+msgstr ""
+
+#: .\templates\rezomeh\home_list.html:18
+msgid "Shadi Ghanaati"
+msgstr ""
+
+#: .\templates\rezomeh\home_list.html:21
+msgid "Django"
+msgstr ""
+
+#: .\templates\rezomeh\home_list.html:24
 msgid "backend-developer"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\home_list.html:59
-msgid "Age"
-msgstr ""
-
-#: .\rezomeh\templates\rezomeh\home_list.html:61
-msgid "e-mail"
-msgstr ""
-
-#: .\rezomeh\templates\rezomeh\home_list.html:62
-msgid "Phone"
-msgstr ""
-
-#: .\rezomeh\templates\rezomeh\home_list.html:63
-msgid "Freelance"
-msgstr ""
-
-#: .\rezomeh\views.py:75
+#: .\views.py:80
 msgid "Comment successfully created"
 msgstr ""

@@ -1,0 +1,151 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'aboutme' %}{% endblock title %}
+{% block content %}
+
+<body>
+ 
+     <!-- About Me Subpage -->
+  <section class="pt-page pt-page-2" data-id="about_me">
+    <div class="section-title-block">
+      <h2 class="section-title">{% trans 'About Me' %}</h2>
+      <h5 class="section-description">{% trans 'backend, Thinker, Creative Doer' %}</h5>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-6 col-md-6 subpage-block">
+        <div class="general-info">
+          
+        </div>
+       
+        <div class="general-info">
+          <div>
+          <h3>{% trans 'aboutme.title' %}</h3>
+          <p>{% trans 'aboutme.description' %}</p>
+          
+        </div>
+        
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-6 subpage-block">
+        <div class="block-title">
+          <h3>{% trans 'Testimonials' %}</h3>
+        </div>
+      <div class="testimonials ">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-item">
+            <!-- Testimonial Content -->
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>{% trans 'Python Programming Certificate: (Coding course and school in 2023 and 2024)' %}</p>
+              </div>
+            </div>            
+            <!-- /Testimonial Content -->            
+          </div>
+          <!-- End of Testimonial 1-->
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-item" style="width:100%">
+            <!-- Testimonial Content -->
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>{% trans 'Django Framework Training: (Coding course and school in 2023 and 2024)' %}</p>
+              </div>
+            </div>            
+            <!-- /Testimonial Content -->          
+          </div>
+          <!-- End of Testimonial 3 -->
+           <!-- Testimonial 3 -->
+           <div class="testimonial-item" style="width:100%">
+            <!-- Testimonial Content -->
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>{% trans 'Git Version Control: (Coding course and school in 2023 and 2024)' %}</p>
+              </div>
+            </div>            
+            <!-- /Testimonial Content -->          
+          </div>
+          <!-- End of Testimonial 3 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Services block -->
+    <div class="block-title">
+      <h3>{% trans 'Services' %}</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-3 subpage-block">
+        <div class="service-block"> 
+          <div class="service-info">
+            <img src="{% static 'images/service/web_design.png' %}" alt="Responsive Design">
+            <h4>{% trans 'Development and implementation of custom websites' %}</h4>
+            <p>{% trans 'aboutme.description 1' %}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 subpage-block">
+        <div class="service-block"> 
+          <div class="service-info">
+            <img src="{% static 'images/service/copywrite.png' %}" alt="Copywriter">
+            <h4>{% trans 'Implementation of online learning management systems (LMS)' %}</h4>
+            <p>{% trans 'aboutme.description 2' %}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 subpage-block">
+        <div class="service-block"> 
+          <div class="service-info">
+            <img src="{% static 'images/service/ecommerce.png' %}" alt="E-Commerce">
+            <h4>{% trans 'Online store design' %}</h4>
+            <p>{% trans 'aboutme.description 3' %}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 subpage-block">
+        <div class="service-block"> 
+          <div class="service-info">
+            <img src="{% static 'images/service/management.png' %}" alt="Management">
+            <h4>{% trans 'Launching and deploying projects' %}</h4>
+            <p>{% trans 'aboutme.description 4' %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Services block -->
+
+    <!-- Fun facts block -->
+    <div class="block-title">
+      <h3>{% trans 'Fun Facts' %}</h3>
+    </div>
+
+      <div class="col-sm-6 col-md-3 subpage-block">
+        <div class="fun-fact-block"> 
+          <i class="pe-7s-icon pe-7s-alarm"></i>
+          <h4>{% trans 'Working Hours' %}</h4>
+          <span class="fun-value">{% trans '~2000+ hours spent on coding' %}</span>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 subpage-block">
+        <div class="fun-fact-block"> 
+          <i class="pe-7s-icon pe-7s-coffee"></i>
+          <h4>{% trans 'Coffee Consumed' %}</h4>
+          <span class="fun-value">{% trans ' ~500+ cups (and still counting ☕)' %}</span>
+        </div>
+      </div>
+    </div>
+    <!-- End of Fun fucts block -->
+  </section>
+  <!-- End of About Me Subpage -->
+
+</body>
+{% endblock %}

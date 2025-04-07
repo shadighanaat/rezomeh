@@ -5,11 +5,15 @@
 
 {% block title %}{% trans 'aboutme' %}{% endblock title %}
 {% block content %}
-
+{% include 'header.html' %} 
 <body>
  
-     <!-- About Me Subpage -->
-  <section class="pt-page pt-page-2" data-id="about_me">
+    <!-- About Me Subpage -->
+    <section id="page-2" class="pt-page pt-page-2" data-id="about_me" 
+    dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
+    align="{% if LANGUAGE_CODE == 'fa' %}right{% else %}left{% endif %}">
+
+
     <div class="section-title-block">
       <h2 class="section-title">{% trans 'About Me' %}</h2>
       <h5 class="section-description">{% trans 'backend, Thinker, Creative Doer' %}</h5>
@@ -144,8 +148,8 @@
       </div>
     </div>
     <!-- End of Fun fucts block -->
-  </section>
-  <!-- End of About Me Subpage -->
+     </section>
+    <!-- End of About Me Subpage -->
 
 </body>
 {% endblock %}

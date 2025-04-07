@@ -1,0 +1,83 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'rezomeh' %}{% endblock title %}
+{% block content %}
+{% include 'header.html' %} 
+<body>
+  
+    <!-- Resume Subpage -->
+      <section class="pt-page pt-page-3" data-id="resume" dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
+      align="{% if LANGUAGE_CODE == 'fa' %}right{% else %}left{% endif %}">
+        <div class="section-title-block">
+          <h2 class="section-title">{% trans 'Resume' %}</h2>
+          <h5 class="section-description">{% trans '2 Years of Experience' %}</h5>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-4 subpage-block">
+            <div class="block-title">
+              <h3>{% trans 'Education' %}</h3>
+            </div>
+            <div class="timeline">
+              <!-- Single event -->
+              <div class="timeline-event te-primary">
+                <h5 class="event-date">{% trans '2011' %}</h5>
+                <h4 class="event-name">{% trans 'Bachelors Degree in Chemical Engineering' %}</h4>
+                <span class="event-description">{% trans 'Shahreza University' %}</span>
+                <p>{% trans 'Chemical engineering' %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 subpage-block">
+            <div class="block-title">
+              <h3>{% trans 'Experience' %}</h3>
+            </div>
+            <div class="timeline">
+              <!-- Single event -->
+              <div class="timeline-event te-primary">
+                <h5 class="event-date">{% trans '2023' %}</h5>
+                <h4 class="event-name">{% trans 'Django Developer' %}</h4>
+                <span class="event-description">{% trans ' Freelance' %}</span>
+                <p>{% trans 'Design and develop web applications using Django Create APIs with Django REST Framework Implement authentication and authorization systems Manage databases using PostgreSQL and implement efficient database queries' %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 subpage-block">
+            <div class="block-title">
+              <h3>{% trans 'Design Skills' %}</h3>
+            </div>
+            <div class="skills-info">
+              <h4>{% trans 'Django' %}</h4>                               
+              <div class="skill-container">
+                <div class="skill-percentage skill-1"></div>
+              </div>
+
+              <h4>{% trans 'Python' %}</h4>
+              <div class="skill-container">
+                <div class="skill-percentage skill-2"></div>
+              </div>
+
+              <h4>{% trans 'Git' %}</h4>
+              <div class="skill-container">
+                <div class="skill-percentage skill-3"></div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="download-cv-block">
+              <a class="button" target="_blank" href="{% url 'download_cv' %}">{% trans 'Download CV' %}</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- End Resume Subpage -->
+
+</body>
+{% endblock %}

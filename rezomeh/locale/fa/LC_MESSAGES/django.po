@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 16:40+0330\n"
-"PO-Revision-Date: 2025-01-25 01:04-0600\n"
+"POT-Creation-Date: 2025-02-22 11:57-0600\n"
+"PO-Revision-Date: 2025-02-24 06:33-0600\n"
 "Last-Translator:   <shadighanaati@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,141 +19,429 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\models.py:14
+#: templates/_base.html:10
+msgid "site me"
+msgstr "سایت من"
+
+#: templates/_base.html:59 rezomeh/templates/rezomeh/home_list.html:21
+msgid "Shadi Ghanaati"
+msgstr "شادی قناعتی "
+
+#: templates/_base.html:60
+msgid "Backend Developer"
+msgstr "بک اند"
+
+#: templates/_base.html:69
+msgid "Home"
+msgstr "خانه"
+
+#: templates/_base.html:72
+msgid "About me"
+msgstr "درباره ی من"
+
+#: templates/_base.html:75 rezomeh/templates/rezomeh/rezomeh_list.html:14
+msgid "Resume"
+msgstr "رزومه"
+
+#: templates/_base.html:78 rezomeh/templates/rezomeh/portfolio_list.html:14
+msgid "Portfolio"
+msgstr "نمونه کارها"
+
+#: templates/_base.html:81 rezomeh/templates/rezomeh/blog_list.html:14
+msgid "Blog"
+msgstr "بلاگ"
+
+#: templates/_base.html:84 rezomeh/templates/rezomeh/contact_list.html:16
+msgid "Contact"
+msgstr "تماس"
+
+#: templates/_base.html:90
+msgid "Switch to English"
+msgstr "به انگلیسی تغییر دهید"
+
+#: templates/_base.html:92
+msgid "Switch to Persian"
+msgstr "به فارسی تغییر دهید"
+
+#: templates/_base.html:115
+msgid "shadi ghanaati"
+msgstr "شادی قناعتی "
+
+#: rezomeh/forms.py:11
+msgid "Name"
+msgstr "نام "
+
+#: rezomeh/forms.py:12
+msgid "Email"
+msgstr "ایمیل"
+
+#: rezomeh/forms.py:13
+msgid "Message"
+msgstr "پیام"
+
+#: rezomeh/models.py:14
 msgid "name"
 msgstr "نام و نام خانوادگی"
 
-#: .\models.py:15
+#: rezomeh/models.py:15
 msgid "expertise"
-msgstr ""
+msgstr "جنگو"
 
-#: .\models.py:16
+#: rezomeh/models.py:16 rezomeh/templates/rezomeh/home_list.html:34
 msgid "Address"
 msgstr "آدرس"
 
-#: .\models.py:17
+#: rezomeh/models.py:17
 msgid "phone_number"
 msgstr "تلفن"
 
-#: .\models.py:18
+#: rezomeh/models.py:18
 msgid "email"
-msgstr ""
+msgstr "ایمیل"
 
-#: .\models.py:23
+#: rezomeh/models.py:23
 msgid "freelance_status"
-msgstr ""
+msgstr "موقعیت"
 
-#: .\templates\rezomeh\aboutme_list.html:6 .\templates\rezomeh\home_list.html:6
+#: rezomeh/templates/rezomeh/aboutme_list.html:6
 msgid "aboutme"
-msgstr ""
+msgstr "درباره من"
 
-#: .\templates\rezomeh\aboutme_list.html:14
+#: rezomeh/templates/rezomeh/aboutme_list.html:14
 msgid "About Me"
-msgstr ""
+msgstr "درباره من"
 
-#: .\templates\rezomeh\aboutme_list.html:15
+#: rezomeh/templates/rezomeh/aboutme_list.html:15
 msgid "backend, Thinker, Creative Doer"
-msgstr ""
+msgstr "بک اند ، متفکر، انجام دهنده خلاق"
 
-#: .\templates\rezomeh\aboutme_list.html:26
+#: rezomeh/templates/rezomeh/aboutme_list.html:26
 msgid "aboutme.title"
-msgstr ""
+msgstr "توسعه دهنده جنگو"
 
-#: .\templates\rezomeh\aboutme_list.html:27
+#: rezomeh/templates/rezomeh/aboutme_list.html:27
 msgid "aboutme.description"
 msgstr ""
+"من یک توسعه دهنده بک اند جنگو هستم که در ساخت و استقرار برنامه های کاربردی وب با استفاده از جنگو، REST Framework (DRF)، Docker و PostgreSQL تجربه دارم. من چندین پروژه از جمله یک وب سایت تجارت الکترونیک (فروشگاه جت شاپ) و یک سیستم مدیریت یادگیری آنلاین (LMS) ایجاد کرده ام که مهارت های خود را در توسعه backend، طراحی API و مدیریت پایگاه داده به نمایش می گذارد.\n"
+"\n"
+"پروژه ها:\n"
+"\n"
+"🔹 فروشگاه جت شاپ (وب سایت تجارت الکترونیک) - Django & PostgreSQL\n"
+"یک پلت فرم کاملاً کاربردی تجارت الکترونیک که در آن کاربران می توانند محصولات را مرور کنند، سبد خرید خود را مدیریت کنند و سفارش دهند.\n"
+"\n"
+"    ویژگی ها: احراز هویت کاربر، سبد خرید، مدیریت سفارش\n"
+"    پشته فناوری: Django، PostgreSQL، Docker\n"
+"\n"
+"🔹 E-commerce API - Django REST Framework (DRF)\n"
+"یک API RESTful برای یک فروشگاه آنلاین که با استفاده از DRF برای رسیدگی به لیست محصولات، احراز هویت کاربر، سبد خرید و پردازش سفارش توسعه یافته است.\n"
+"\n"
+"    ویژگی ها: احراز هویت مبتنی بر توکن، نقاط پایانی API برای مدیریت محصول و سفارش\n"
+"    پشته فناوری: جنگو، DRF، PostgreSQL\n"
+"\n"
+"🔹 LMS (سیستم مدیریت یادگیری) - Django & DRF\n"
+"یک سیستم پشتیبان برای یک پلت فرم یادگیری آنلاین که به کاربران امکان می دهد ثبت نام کنند، در دوره ها ثبت نام کنند و پیشرفت خود را پیگیری کنند.\n"
+"\n"
+"    ویژگی ها: ایجاد دوره، ثبت نام دانش آموزان، پیگیری پیشرفت\n"
+"    پشته فناوری: جنگو، DRF، PostgreSQL\n"
+"\n"
+"همه پروژه ها در https://github.com/shadighanaat در دسترس هستند."
 
-#: .\templates\rezomeh\aboutme_list.html:36
+#: rezomeh/templates/rezomeh/aboutme_list.html:36
 msgid "Testimonials"
-msgstr ""
+msgstr "گواهینامه ها"
 
-#: .\templates\rezomeh\aboutme_list.html:44
+#: rezomeh/templates/rezomeh/aboutme_list.html:44
 msgid ""
 "Python Programming Certificate: (Coding course and school in 2023 and 2024)"
-msgstr ""
+msgstr "گواهی برنامه نویسی پایتون: (دوره برنامه نویسی در سال 2023 و 2024)"
 
-#: .\templates\rezomeh\aboutme_list.html:56
+#: rezomeh/templates/rezomeh/aboutme_list.html:56
 msgid "Django Framework Training: (Coding course and school in 2023 and 2024)"
-msgstr ""
+msgstr "آموزش چارچوب جنگو: (دوره کدنویسی در سال 2023 و 2024)"
 
-#: .\templates\rezomeh\aboutme_list.html:67
+#: rezomeh/templates/rezomeh/aboutme_list.html:67
 msgid "Git Version Control: (Coding course and school in 2023 and 2024)"
-msgstr ""
+msgstr "کنترل نسخه Git: (دوره برنامه نویسی در سال 2023 و 2024)"
 
-#: .\templates\rezomeh\aboutme_list.html:79
+#: rezomeh/templates/rezomeh/aboutme_list.html:79
 msgid "Services"
-msgstr ""
+msgstr "خدمات"
 
-#: .\templates\rezomeh\aboutme_list.html:87
+#: rezomeh/templates/rezomeh/aboutme_list.html:87
 msgid "Development and implementation of custom websites"
-msgstr ""
+msgstr "توسعه و پیاده سازی وب سایت های سفارشی"
 
-#: .\templates\rezomeh\aboutme_list.html:88
+#: rezomeh/templates/rezomeh/aboutme_list.html:88
 msgid "aboutme.description 1"
-msgstr ""
+msgstr "طراحی و توسعه وب‌سایت‌های اختصاصی با Django و Django REST Framework"
 
-#: .\templates\rezomeh\aboutme_list.html:97
+#: rezomeh/templates/rezomeh/aboutme_list.html:97
 msgid "Implementation of online learning management systems (LMS)"
-msgstr ""
+msgstr "پیاده سازی سیستم های مدیریت یادگیری آنلاین (LMS)"
 
-#: .\templates\rezomeh\aboutme_list.html:98
+#: rezomeh/templates/rezomeh/aboutme_list.html:98
 msgid "aboutme.description 2"
 msgstr ""
+"طراحی و پیاده‌سازی پلتفرم‌های آموزشی شامل مدیریت دوره‌ها، آزمون‌ها و نمرات"
 
-#: .\templates\rezomeh\aboutme_list.html:107
+#: rezomeh/templates/rezomeh/aboutme_list.html:107
 msgid "Online store design"
-msgstr ""
+msgstr "طراحی فروشگاه اینترنتی"
 
-#: .\templates\rezomeh\aboutme_list.html:108
+#: rezomeh/templates/rezomeh/aboutme_list.html:108
 msgid "aboutme.description 3"
-msgstr ""
+msgstr "پیاده‌سازی سیستم‌های مدیریت سفارشات، پرداخت آنلاین و مدیریت محصولات"
 
-#: .\templates\rezomeh\aboutme_list.html:117
+#: rezomeh/templates/rezomeh/aboutme_list.html:117
 msgid "Launching and deploying projects"
-msgstr ""
+msgstr "راه اندازی و استقرار پروژه ها"
 
-#: .\templates\rezomeh\aboutme_list.html:118
+#: rezomeh/templates/rezomeh/aboutme_list.html:118
 msgid "aboutme.description 4"
 msgstr ""
+"کانفیگ و استقرار پروژه‌ها در سرورهای اختصاصی، VPS یا سرویس‌های ابری\n"
+" (مانند Liara )\n"
+"استفاده از Docker برای توسعه و استقرار"
 
-#: .\templates\rezomeh\aboutme_list.html:127
+#: rezomeh/templates/rezomeh/aboutme_list.html:127
 msgid "Fun Facts"
-msgstr ""
+msgstr "حقایق جالب"
 
-#: .\templates\rezomeh\aboutme_list.html:133
+#: rezomeh/templates/rezomeh/aboutme_list.html:133
 msgid "Working Hours"
-msgstr ""
+msgstr "ساعت کاری"
 
-#: .\templates\rezomeh\aboutme_list.html:134
+#: rezomeh/templates/rezomeh/aboutme_list.html:134
 msgid "~2000+ hours spent on coding"
-msgstr ""
+msgstr "بیش از 2000 ساعت برای کدنویسی صرف شده است"
 
-#: .\templates\rezomeh\aboutme_list.html:141
+#: rezomeh/templates/rezomeh/aboutme_list.html:141
 msgid "Coffee Consumed"
-msgstr ""
+msgstr "قهوه مصرف شده"
 
-#: .\templates\rezomeh\aboutme_list.html:142
+#: rezomeh/templates/rezomeh/aboutme_list.html:142
 msgid " ~500+ cups (and still counting ☕)"
-msgstr ""
+msgstr "بیش از 500 فنجان (و هنوز در حال شمارش ☕)"
 
-#: .\templates\rezomeh\home_list.html:18
-msgid "Shadi Ghanaati"
-msgstr ""
+#: rezomeh/templates/rezomeh/blog_detail.html:15
+msgid "blog detail"
+msgstr "جزئیات وبلاگ"
 
-#: .\templates\rezomeh\home_list.html:21
+#: rezomeh/templates/rezomeh/blog_detail.html:49
+msgid "Comments"
+msgstr "نظرات"
+
+#: rezomeh/templates/rezomeh/blog_detail.html:74
+msgid "Leave a Comment"
+msgstr "نظر بدهید"
+
+#: rezomeh/templates/rezomeh/blog_detail.html:79
+msgid "Add comment"
+msgstr "نظر اضافه کنید"
+
+#: rezomeh/templates/rezomeh/blog_list.html:6
+msgid "blog list"
+msgstr "لیست وبلاگ"
+
+#: rezomeh/templates/rezomeh/blog_list.html:15
+msgid "My Diary"
+msgstr "دفتر خاطرات من"
+
+#: rezomeh/templates/rezomeh/contact_list.html:8
+msgid "contact"
+msgstr "تماس"
+
+#: rezomeh/templates/rezomeh/contact_list.html:17
+#: rezomeh/templates/rezomeh/contact_list.html:23
+msgid "Get in Touch"
+msgstr "تماس بگیرید"
+
+#: rezomeh/templates/rezomeh/contact_list.html:25
+msgid ""
+"You can contact me via email or LinkedIn for further cooperation and "
+"communication."
+msgstr ""
+"برای همکاری و ارتباط بیشتر می توانید از طریق ایمیل یا لینکدین با من تماس "
+"بگیرید."
+
+#: rezomeh/templates/rezomeh/contact_list.html:31
+msgid "Iran, Esfahan"
+msgstr "ایران، اصفهان"
+
+#: rezomeh/templates/rezomeh/contact_list.html:39
+msgid "shadighanaati@gmail.com"
+msgstr "shadighanaati@gmail.com "
+
+#: rezomeh/templates/rezomeh/contact_list.html:55
+msgid "Freelance Available"
+msgstr "فریلنسری"
+
+#: rezomeh/templates/rezomeh/contact_list.html:62
+#| msgid "Contact"
+msgid "Contact Form"
+msgstr "فرم تماس"
+
+#: rezomeh/templates/rezomeh/contact_list.html:68
+msgid "submit"
+msgstr "ارسال"
+
+#: rezomeh/templates/rezomeh/home_list.html:6
+msgid "home"
+msgstr "خانه"
+
+#: rezomeh/templates/rezomeh/home_list.html:24
+#: rezomeh/templates/rezomeh/rezomeh_list.html:54
 msgid "Django"
-msgstr ""
+msgstr "جنگو"
 
-#: .\templates\rezomeh\home_list.html:24
+#: rezomeh/templates/rezomeh/home_list.html:27
 msgid "backend-developer"
-msgstr ""
+msgstr "بک اند"
 
-#: .\views.py:80
+#: rezomeh/templates/rezomeh/home_list.html:33
+msgid "Age"
+msgstr "سن : "
+
+#: rezomeh/templates/rezomeh/home_list.html:34
+msgid "home.Address"
+msgstr " : ایران_اصفهان"
+
+#: rezomeh/templates/rezomeh/home_list.html:35
+msgid "e-mail"
+msgstr "ایمیل : "
+
+#: rezomeh/templates/rezomeh/home_list.html:35
+msgid "home.email"
+msgstr "shadighanaati@gmail.com"
+
+#: rezomeh/templates/rezomeh/home_list.html:36
+msgid "Phone"
+msgstr "تلفن :  "
+
+#: rezomeh/templates/rezomeh/home_list.html:36
+msgid "home.phone"
+msgstr "09132880557 "
+
+#: rezomeh/templates/rezomeh/home_list.html:37
+msgid "Freelance"
+msgstr "موقعیت :  "
+
+#: rezomeh/templates/rezomeh/home_list.html:37
+msgid "home.Available"
+msgstr " فریلنسر"
+
+#: rezomeh/templates/rezomeh/portfolio_detail.html:6
+msgid "portfolio detail"
+msgstr "جزئیات نمونه کارها"
+
+#: rezomeh/templates/rezomeh/portfolio_detail.html:20
+msgid "Portfolio Project"
+msgstr "پروژه نمونه کارها"
+
+#: rezomeh/templates/rezomeh/portfolio_detail.html:58
+msgid "Description"
+msgstr "توضیحات"
+
+#: rezomeh/templates/rezomeh/portfolio_detail.html:81
+msgid "Share"
+msgstr "به اشتراک بگذارید"
+
+#: rezomeh/templates/rezomeh/portfolio_list.html:6
+msgid "portfolio"
+msgstr "نمونه کارها"
+
+#: rezomeh/templates/rezomeh/portfolio_list.html:15
+msgid "My Best Works"
+msgstr "بهترین آثار من"
+
+#: rezomeh/templates/rezomeh/portfolio_list.html:23
+msgid "All"
+msgstr "همه"
+
+#: rezomeh/templates/rezomeh/portfolio_list.html:24
+msgid "Personal"
+msgstr "شخصی"
+
+#: rezomeh/templates/rezomeh/portfolio_list.html:25
+msgid "Store"
+msgstr "فروشگاه"
+
+#: rezomeh/templates/rezomeh/portfolio_list.html:26
+#: rezomeh/templates/rezomeh/rezomeh_list.html:59
+msgid "Python"
+msgstr "پایتون"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:6
+msgid "rezomeh"
+msgstr "رزومه"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:15
+msgid "2 Years of Experience"
+msgstr "2 سال تجربه"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:21
+msgid "Education"
+msgstr "آموزش و پرورش"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:26
+msgid "2011"
+msgstr "2011"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:27
+msgid "Bachelors Degree in Chemical Engineering"
+msgstr "لیسانس مهندسی شیمی"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:28
+msgid "Shahreza University"
+msgstr "دانشگاه شهرضا"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:29
+msgid "Chemical engineering"
+msgstr "مهندسی شیمی"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:36
+msgid "Experience"
+msgstr "تجربه کنید"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:41
+msgid "2023"
+msgstr "2023"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:42
+msgid "Django Developer"
+msgstr "توسعه دهنده جنگو"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:43
+msgid " Freelance"
+msgstr "آزادکار"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:44
+msgid ""
+"Design and develop web applications using Django Create APIs with Django "
+"REST Framework Implement authentication and authorization systems Manage "
+"databases using PostgreSQL and implement efficient database queries"
+msgstr ""
+"طراحی و توسعه برنامه های کاربردی وب با استفاده از Django Create APIs with "
+"Django REST Framework پیاده سازی سیستم های احراز هویت و مجوز مدیریت پایگاه "
+"های داده با استفاده از PostgreSQL و پیاده سازی پرس و جوهای پایگاه داده "
+"کارآمد"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:51
+msgid "Design Skills"
+msgstr "مهارت های طراحی"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:64
+msgid "Git"
+msgstr "گیت"
+
+#: rezomeh/templates/rezomeh/rezomeh_list.html:74
+msgid "Download CV"
+msgstr "دانلود CV"
+
+#: rezomeh/views.py:91
+msgid "Email successfully created"
+msgstr "ایمیل با موفقیت ایجاد شد"
+
+#: rezomeh/views.py:113
 msgid "Comment successfully created"
-msgstr ""
-
-#~ msgid "Age"
-#~ msgstr "سن"
-
-#~ msgid "e-mail"
-#~ msgstr "ایمیل"
+msgstr "نظر با موفقیت ایجاد شد"

@@ -1,0 +1,91 @@
+{% load static %}
+{% load i18n %}
+
+<!-- Loading animation -->
+<div class="preloader">
+    <div class="preloader-animation">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+  <!-- /Loading animation -->
+  <div id="page" class="page">
+   <!-- Header -->
+   <header id="site_header" class="header mobile-menu-hide">
+    <div class="my-photo">
+      <img src="{% static 'images/IMG_۲۰۲۴۱۱۰۶_۰۸۳۰۳۲.jpg' %}" alt="image">
+      <div class="mask"></div>
+    </div>
+
+    <div class="site-title-block">
+      <h1 class="site-title">{% trans 'Shadi Ghanaati' %}</h1>
+      <p class="site-description">{% trans 'Backend Developer' %}</p>
+    </div>
+
+    <!-- Navigation & Social buttons -->
+      <div class="site-nav">
+      <!-- Main menu -->
+      <ul id="nav" class="site-main-menu">
+        <!-- About Me Subpage link -->
+        <li>
+          <a  href="{% url 'home_list' %}" data-animation="58" data-goto="1">{% trans 'Home' %}</a>
+        </li>
+        <li>
+          <a  href="{% url 'aboutme_list' %}" data-animation="59" data-goto="1">{% trans 'About me' %}</a>
+        </li>
+        <li>
+          <a  href="{% url 'rezomeh_list' %}" data-animation="60" data-goto="1">{% trans 'Resume' %}</a>
+        </li>
+        <li>
+          <a  href="{% url 'portfolio_list' %}" data-animation="61" data-goto="1">{% trans 'Portfolio' %}</a>
+        </li>
+        <li>
+          <a  href="{% url 'blog_list' %}" data-animation="58" data-goto="1">{% trans 'Blog' %}</a>
+        </li>
+        <li>
+          <a  class="face bottom" href="{% url 'contact_list' %}" data-animation="59" data-goto="1">{% trans 'Contact' %}</a>
+        </li>
+        <li>
+          <a href="{% url 'language' %}?next={{ request.path }}" data-animation="59" data-goto="1">
+              {% if LANGUAGE_CODE == 'fa' %}
+                  {% trans "Switch to English" %}
+              {% else %}
+                  {% trans "Switch to Persian" %}
+              {% endif %}
+          </a>
+      </li>
+      </ul>
+      <!-- /Main menu -->
+
+      <!-- Social buttons -->
+      <ul class="social-links">
+        <li><a class="tip social-button" href="https://www.linkedin.com/in/shadi-ghanaati-b2880229a/" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="tip social-button" href="https://github.com/shadighanaat/" title="github"><i class="fa fa-github"></i></a></li>
+        <li><a class="tip social-button" href="https://instagram/s.h.a.d.i.1396.com/" title="instagram"><i class="fa fa-instagram"></i></a></li>
+        <li><a class="tip social-button" href="https://google.com/" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+      <!-- /Social buttons -->
+      </div> 
+    <!-- Navigation & Social buttons -->
+     
+  </header>
+  <!-- /Header -->
+      <!-- Mobile Header -->
+      <div class="mobile-header mobile-visible">
+        <div class="mobile-logo-container">
+          <div class="mobile-site-title">{% trans 'shadi ghanaati' %}</div>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- /Mobile Header -->
+ 
+      <!--Main Content -->
+      <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+          <!-- Subpages -->
+          <div class="subpages">
+            

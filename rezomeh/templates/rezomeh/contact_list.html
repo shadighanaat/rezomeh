@@ -1,0 +1,77 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}{% trans 'contact' %}{% endblock title %}
+{% block content %}
+{% include 'header.html' %} 
+<body>
+ 
+    <!-- Contact Subpage -->
+      <section class="pt-page pt-page-6" data-id="contact" dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
+      align="{% if LANGUAGE_CODE == 'fa' %}right{% else %}left{% endif %}">
+        <div class="section-title-block">
+          <h2 class="section-title">{% trans 'Contact' %}</h2>
+          <h5 class="section-description">{% trans 'Get in Touch' %}</h5>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-6 subpage-block">
+            <div class="block-title">
+              <h3>{% trans 'Get in Touch' %}</h3>
+            </div>
+            <p>{% trans 'You can contact me via email or LinkedIn for further cooperation and communication.' %}</p>
+            <div class="contact-info-block">
+              <div class="ci-icon">
+                <i class="pe-7s-icon pe-7s-map-marker"></i>
+              </div>
+              <div class="ci-text">
+                <h5>{% trans 'Iran, Esfahan' %}</h5>
+              </div>
+            </div>
+            <div class="contact-info-block">
+              <div class="ci-icon">
+                <i class="pe-7s-icon pe-7s-mail"></i>
+              </div>
+              <div class="ci-text">
+                <h5>{% trans 'shadighanaati@gmail.com' %}</h5>
+              </div>
+            </div>
+            <div class="contact-info-block">
+              <div class="ci-icon">
+                <i class="pe-7s-icon pe-7s-call"></i>
+              </div>
+              <div class="ci-text">
+                <h5>09132880557</h5>
+              </div>
+            </div>
+            <div class="contact-info-block">
+              <div class="ci-icon">
+                <i class="pe-7s-icon pe-7s-check"></i>
+              </div>
+              <div class="ci-text">
+                <h5>{% trans 'Freelance Available' %}</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 subpage-block">
+            <div class="block-title">
+              <h3>{% trans 'Contact Form' %}</h3>
+            </div>
+            <form method="post">
+              {% csrf_token %}
+              {{ form| crispy }}
+              <div class="help-block with-errors"></div>
+              <button type="submit">{% trans 'submit' %}</button>
+          </form>
+          </div>
+        </div>
+      </section>
+    <!-- End Contact Subpage -->
+
+</body>
+{% endblock %}

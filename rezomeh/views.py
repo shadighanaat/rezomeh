@@ -1,14 +1,22 @@
 from django.shortcuts import get_object_or_404, render
 from django.views import generic
+
 from django.shortcuts import redirect
+from django.http import HttpResponse
+from django.http import JsonResponse
 
 from django.utils.translation import gettext as _
 from django.contrib import messages
 from django.utils import translation
-from django.utils.translation import get_language
 
-from rezomeh.forms import CommentForm
+from django.utils.translation import get_language
+from django.template.loader import get_template
+from django.core.mail import send_mail
+
+from rezomeh.forms import CommentForm, ContactForm
 from rezomeh.models import AboutMe, Blog, Comment, Contact, Home, Portfolio, Rezomeh
+from weasyprint import HTML
+
 
 
 class HomeView(generic.ListView):
@@ -30,16 +38,26 @@ class RezomehView(generic.ListView):
 
 
 class PortfolioView(generic.ListView):
-    queryset = Portfolio.objects.all()  
-    template_name = 'rezomeh/portfolio_list.html'  
+    model = Portfolio
+    template_name = 'rezomeh/portfolio_list.html'
     context_object_name = 'portfolios'
-
+    
+    def get_queryset(self):
+        category = self.request.GET.get('category', 'all')
+        if category == 'all':
+            return Portfolio.objects.all()
+        else:
+            return Portfolio.objects.filter(category=category)
 
 
 class PortfolioDetailView(generic.DetailView):
     model = Portfolio
     template_name = 'rezomeh/portfolio_detail.html'
     context_object_name = 'portfolio'
+   
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 class BlogView(generic.ListView):
@@ -59,10 +77,26 @@ class BlogDetailView(generic.DetailView):
         return context
     
 
-class ContactView(generic.ListView):
-    queryset = Contact.objects.all()  
-    template_name = 'rezomeh/contact_list.html'  
-    context_object_name = 'contacts'
+def contact_view(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            message = form.cleaned_data["message"]
+
+            subject = f" {name}"
+            body = f" {name}\n: {email}\n\n{message}"
+
+            send_mail(subject, body, email, ["shadighanaati@gmail.com"])
+
+            messages.success(request, _('Email successfully created'))
+
+    else:
+        form = ContactForm()
+
+    return render(request, "rezomeh/contact_list.html", {"form": form})
+
 
 
 class CommentCreateView(generic.CreateView):
@@ -74,21 +108,27 @@ class CommentCreateView(generic.CreateView):
         obj.author = self.request.user
 
         blog_id = int(self.kwargs['blog_id'])
-        blog = get_object_or_404(Blog, id=blog_id)
+        blog= get_object_or_404(Blog, id=blog_id)
         obj.blog = blog
-
+        obj.save() 
+        
         messages.success(self.request, _('Comment successfully created'))
 
-        return super().form_valid(form)    
+        return redirect('blog_detail', pk=blog.id)
     
 
 
 def switch_language(request):
     current_language = translation.get_language()
-    new_language = 'fa' if current_language == 'en' else 'en'  # تغییر زبان
-    translation.activate(new_language)  # فعال کردن زبان جدید
-    response = redirect(request.META.get('HTTP_REFERER', '/'))  # بازگشت به صفحه قبلی
-    response.set_cookie('django_language', new_language)  # ذخیره زبان جدید در کوکی
+    new_language = 'fa' if current_language == 'en' else 'en'
+    translation.activate(new_language)
+
+    next_url = request.GET.get('next', '/')
+
+    response = redirect(next_url)
+    response.set_cookie('django_language', new_language)
+    request.session['django_language'] = new_language
+    
     return response
 
 
@@ -97,3 +137,18 @@ def home_view(request):
         'LANGUAGE_CODE': get_language()
     }
     return render(request, 'your_template.html', context)
+
+
+    
+def download_cv(request):
+    template = get_template('rezomeh/rezomeh_list.html') 
+    html = template.render({})
+    pdf_file = HTML(string=html).write_pdf()
+
+    response = HttpResponse(pdf_file, content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="resume.pdf"'
+    return response
+
+
+def custom_server_error(request):
+    return render(request, "errors/500.html", status=500)

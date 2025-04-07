@@ -35,7 +35,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'technology', ]       
+    prepopulated_fields = {"slug": ("title",)}
+    list_display = ['title', 'category', 'technology', ]  
+
 
 
 @admin.register(Blog)

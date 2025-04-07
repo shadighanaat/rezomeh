@@ -1,0 +1,58 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'portfolio' %}{% endblock title %}
+{% block content %}
+{% include 'header.html' %} 
+<body>
+ 
+    <!-- Portfolio Subpage -->
+      <section class="pt-page pt-page-4" data-id="portfolio" dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
+      align="{% if LANGUAGE_CODE == 'fa' %}right{% else %}left{% endif %}">
+        <div class="section-title-block">
+          <h2 class="section-title">{% trans 'Portfolio' %}</h2>
+          <h5 class="section-description">{% trans 'My Best Works' %}</h5>
+        </div>
+
+        <!-- Portfolio Content -->
+        <div class="portfolio-content">
+                      
+          <form method="get" action="{% url 'portfolio_list' %}" >
+            <ul id="portfolio_filters" class="portfolio-filters">
+                <li><button type="submit" name="category" value="all" class="btn btn-sm btn-link {% if request.GET.category == 'all' %}active{% endif %}">{% trans 'All' %}</button></li>
+                <li><button type="submit" name="category" value="personal" class="btn btn-sm btn-link {% if request.GET.category == 'personal' %}active{% endif %}">{% trans 'Personal' %}</button></li>
+                <li><button type="submit" name="category" value="store" class="btn btn-sm btn-link {% if request.GET.category == 'store' %}active{% endif %}">{% trans 'Store' %}</button></li>
+                <li><button type="submit" name="category" value="python" class="btn btn-sm btn-link {% if request.GET.category == 'python' %}active{% endif %}">{% trans 'Python' %}</button></li>
+            </ul>
+        </form>
+          <!-- End of Portfolio filter -->
+
+           <!-- Portfolio Grid -->
+      <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+        <figure class="item" data-groups='["all", "media"]'>
+          <div class="row">
+            <div class="column">
+              {% for portfolio in portfolios %}
+                <div class="portfolio-item">
+                  <a target="_blank" href="{% url 'portfolio_detail' portfolio.id %}">
+                    <img src="{{ portfolio.image.url }}" alt="" width="600" height="400">
+                    <div class="portfolio-info">
+                      <h5 class="name">{{ portfolio.title }}</h5>
+                      <small>{{ portfolio.category }}</small>
+                    </div>
+                  </a>
+                </div>
+              {% endfor %}
+            </figure>
+          </div>
+          
+
+
+      </section >
+    <!-- /Portfolio Subpage -->
+
+</body>
+
+{% endblock %}

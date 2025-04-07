@@ -1,0 +1,45 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'blog list' %}{% endblock title %}
+{% block content %}
+{% include 'header.html' %} 
+<body>
+ 
+        <!-- Blog Subpage -->
+        <section class="pt-page pt-page-5" data-id="blog"  dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
+        align="{% if LANGUAGE_CODE == 'fa' %}right{% else %}left{% endif %}">
+            <div  class="section-title-block">
+              <h2 class="section-title">{% trans 'Blog' %}</h2>
+              <h5 class="section-description">{% trans 'My Diary' %}</h5>
+            </div>
+            <!-- <div class="blog-masonry"> -->
+              <!-- Blog Post 1 -->
+              {% for blog in blogs %}
+              <div class="item">
+                <div class="blog-card">
+                  <div class="media-block">
+                    <a href="{% url 'blog_detail' blog.id %}">
+                      <img class="post-image img-responsive" src="{{ blog.image.url }}" alt="" />
+                      <div class="mask"></div>
+                      <div class="post-date"><span class="day"></span><span class="month">{{ blog.datetime_created}}</span><!--<span class="year">2016</span>--></div>
+                    </a>
+                  </div>
+                  <div class="post-info">
+                    <ul class="category">
+                      <li><a href="#">Travel</a></li>
+                    </ul>
+                    <a href="blog-post-1.html"><h4 class="blog-item-title">{{ blog.title }}</h4></a>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <!-- End of Blog Post 1 -->
+            </div>
+        </section>
+          <!-- End Blog Subpage -->
+
+</body>
+{% endblock %}

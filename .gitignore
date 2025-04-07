@@ -1,6 +1,13 @@
 venv/
 db.sqlite3
 .idea/
+static/
 staticfiles/
+media/
+package-lock.json
+package.json
 .env
 *.lock
+config/config/*
+__pycache__/
+*/__pycache__/

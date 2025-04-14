@@ -42,19 +42,22 @@ class Servise(models.Model):
         return self.title
 
 class Rezomeh(models.Model):
-    title = models.CharField(max_length=155)
-    short_description = models.TextField()
+    title_en = models.CharField(max_length=155)
+    title_fa = models.CharField(max_length=155)
+    short_description_en = models.TextField()
+    short_description_fa = models.TextField()
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.title} on {self.datetime_created}"
+        return f"{self.title_en} on {self.datetime_created}"
 
 class Category(models.Model):
-    title = models.CharField(max_length=155)
+    title_en = models.CharField(max_length=155)
+    title_fa = models.CharField(max_length=155)
 
     def __str__(self):
-        return self.title
+        return self.title_en
 
 class Portfolio(models.Model):
     CATEGORY_CHOICES = [
@@ -62,11 +65,14 @@ class Portfolio(models.Model):
         ('store', 'Store'),
         ('python', 'Python'),
     ]
-    title = models.CharField(max_length=155)
+    title_en = models.CharField(max_length=155)
+    title_fa = models.CharField(max_length=155)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
     slug = slug = models.SlugField()
-    description = models.TextField()
-    technology = models.CharField(max_length=500) 
+    description_en  = models.TextField()
+    description_fa =  models.TextField()
+    technology_en = models.CharField(max_length=500) 
+    technology_fa = models.CharField(max_length=500) 
     image = models.ImageField(upload_to='images/',  blank=True)
     video_file = models.FileField(upload_to='videos/', blank=True, null=True)
     github_link_django = models.URLField(max_length=200, blank=True, null=True)
@@ -75,16 +81,20 @@ class Portfolio(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.title_en
     
     def get_absolute_url(self):
          return reverse('portfolio_detail', kwargs={'pk': self.pk})
     
 class Blog(models.Model):
-    title = models.CharField(max_length=100)
-    technology = models.CharField(max_length=100) 
-    description = models.TextField()
-    short_description = models.TextField(blank=True)  
+    title_en = models.CharField(max_length=100)
+    title_fa = models.CharField(max_length=100)
+    technology_en = models.CharField(max_length=100) 
+    technology_fa = models.CharField(max_length=100) 
+    description_en = models.TextField()
+    description_fa = models.TextField()
+    short_description_en = models.TextField(blank=True)  
+    short_description_fa = models.TextField(blank=True)  
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images/', blank=True)
 
@@ -92,7 +102,7 @@ class Blog(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.title_en
     
 
     def get_absolute_url(self):
@@ -109,6 +119,7 @@ class Comment(models.Model):
         verbose_name='Comment author'
     )
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments', blank=True, null=True) 
+    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now_add=True)
 

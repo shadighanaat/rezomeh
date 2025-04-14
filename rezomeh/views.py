@@ -58,7 +58,7 @@ class PortfolioDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
-
+    
 
 class BlogView(generic.ListView):
     queryset = Blog.objects.all()  
@@ -98,7 +98,6 @@ def contact_view(request):
     return render(request, "rezomeh/contact_list.html", {"form": form})
 
 
-
 class CommentCreateView(generic.CreateView):
     model = Comment
     form_class = CommentForm
@@ -108,15 +107,20 @@ class CommentCreateView(generic.CreateView):
         obj.author = self.request.user
 
         blog_id = int(self.kwargs['blog_id'])
-        blog= get_object_or_404(Blog, id=blog_id)
+        blog = get_object_or_404(Blog, id=blog_id)
         obj.blog = blog
-        obj.save() 
-        
-        messages.success(self.request, _('Comment successfully created'))
 
+        parent_id = self.request.POST.get('parent_id')
+        if parent_id:
+            parent_comment = Comment.objects.get(id=parent_id)
+            obj.parent = parent_comment  # اصلاح شده
+
+        obj.save()
+
+        messages.success(self.request, _('Comment successfully created'))
         return redirect('blog_detail', pk=blog.id)
     
-
+    
 
 def switch_language(request):
     current_language = translation.get_language()
@@ -136,7 +140,7 @@ def home_view(request):
     context = {
         'LANGUAGE_CODE': get_language()
     }
-    return render(request, 'your_template.html', context)
+    return render(request, 'rezomeh.html', context)
 
 
     

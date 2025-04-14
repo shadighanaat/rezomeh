@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # jalali date
+    'jalali_date',
 
     # local apps
     'rezomeh.apps.RezomehConfig',

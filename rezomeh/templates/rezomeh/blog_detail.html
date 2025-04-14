@@ -2,6 +2,9 @@
 {% load static %}
 
 {% load i18n %}
+{% load jalali_tags %}
+{% load persian_translation_tags %}
+
 {% load crispy_forms_tags %}
 {% block extra_head %}
 
@@ -27,20 +30,36 @@
           </div>
 
           <div class="blog-post-content">
-            <h1>{{ blog.technology}}</h1>
-            <p class="lead">{{ blog.shortdescription}}</p>
+            <h1>
+            {% if LANGUAGE_CODE == "fa" %}
+              {{ blog.technology_fa }}
+            {% else %}
+              {{ blog.technology_en }}
+            {% endif %}
+            </h1>
+            <p class="lead">
+              {% if LANGUAGE_CODE == "fa" %}
+                  {{ blog.description_fa }}
+              {% else %}
+                  {{ blog.description_en }}
+              {% endif %}
+            </p>
 
-            <p>{{ blog.description }}</p>
+            <p>
+            {% if LANGUAGE_CODE == "fa" %}
+              {{ blog.short_description_fa }}
+            {% else %}
+              {{ blog.short_description_en }}
+            {% endif %}</p>
 
             <div class="post-info">
               <span class="autor"><i class="fa fa-fw fa-user"></i> {{ blog.author }}</span>
               <span class="divider">|</span>
-              <span class="date"><i class="fa fa-fw fa-clock-o"></i>{{ blog.datetime_created }}</span>
+              <span class="date"><i class="fa fa-fw fa-clock-o"></i>{{ blog.datetime_created|to_jalali:'%y/%m/%d _ %H:%M:%S'|translate_number }}</span>
               <!-- Share Buttons -->
               <div class="btn-group share-buttons pull-right hidden-xs">
-                <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>
-                <a href="#" target="_blank" class="btn"><i class="fa fa-twitter"></i> </a>
-                <a href="#" target="_blank" class="btn"><i class="fa fa-dribbble"></i> </a>
+                <a href="https://github.com/shadighanaat" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                <a class="tip social-button" href="https://www.linkedin.com/in/shadi-ghanaati-b2880229a/" title="linkedin"><i class="fa fa-linkedin"></i></a>
               </div>
               <!-- /Share Buttons -->
             </div>
@@ -49,43 +68,77 @@
               <div class="block-title">
                 <h3>{% trans 'Comments' %}</h3>
               </div>
-              {% for comment in blog.comments.all %} 
+              {% for comment in blog.comments.all|dictsortreversed:"datetime_created" %}
+               {% if not comment.parent %}
               <div class="media">
-                  <a class="pull-left" href="#">
-                      <img class="media-object" src="{{ blog.image.url }}" alt="">
-                  </a>
-                  <div class="media-body">
-                          <a href="#">{{ comment.author.username }}</a> <span class="divider">|</span> <span class="light-gray">{{ comment.datetime_created }}</span>
-                      </div>
-                      <p>{{ comment.message }}</p>
-                      <div class="media-footer">
-                          <a href="#"><i class="fa fa-reply"></i> Reply</a>
-                          <span class="divider"></span>
-                          <i class="fa fa-thumbs-up"></i>
-                          <span>0</span>
-                          <i class="fa fa-thumbs-down"></i>
-                      </div>
-                {% endfor %}
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="{{ blog.image.url }}" alt="">
+                </a>
+                <div class="media-body">
+                  <a href="#">{{ comment.name }}</a>
+                  <span class="divider">|</span>
+                  <span class="light-gray">
+                    {{ comment.datetime_created|to_jalali:'%y/%m/%d _ %H:%M:%S' }}
+                  </span>
+                  <p>{{ comment.message }}</p>
+            
+                  <div class="media-footer">
+                    <a href="#" onclick="toggleReplyForm(event, '{{ comment.id }}')">
+                      <i class="fa fa-reply"></i> {% trans 'Reply' %}
+                    </a>
                   </div>
+            
+                  {% for reply in comment.replies.all %}
+                    <div class="media" style="margin-right: 20px;">
+                      <strong>{{ reply.name }}</strong>: {{ reply.message }}
+                    </div>
+                  {% endfor %}
+            
+                  <div id="reply-form-{{ comment.id }}" style="display: none; margin-top: 10px;">
+                    <form class="form-add-comment" action="{% url 'comment_create' blog.id %}" method="POST">
+                      {% csrf_token %}
+                      {{ comment_form|crispy }}
+                      <input type="hidden" name="parent_id" value="{{ comment.id }}">
+                      <button type="submit">{% trans 'Submit reply' %}</button>
+                    </form>
+                  </div>
+            
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+            
+            <div class="post-comment-add">
+              <div class="block-title">
+                <h3>{% trans 'Leave a Comment' %}</h3>
+              </div>
+              <form class="form-add-comment" action="{% url 'comment_create' blog.id %}" method="POST">
+                {% csrf_token %}
+                {{ comment_form|crispy }}
+                <input type="hidden" name="parent_id" value="">
+                <button type="submit">{% trans 'Submit comment' %}</button>
+              </form>
+            </div>
               </div>
             </div>
-
-            <div class="post-comment-add">
-                <div class="block-title">
-                  <h3>{% trans 'Leave a Comment' %}</h3>
-                </div>
-                <form class="form-add-comment" action="{% url 'comment_create' blog.id %}"  method="POST">
-                    {% csrf_token %}
-                    {{ comment_form|crispy }}
-                    <button class="button" type="submit">{% trans 'Add comment' %}</button></a>
-                </form>
             </div>
-
+           
           </div>
 
         </div>
     </div>
 </div>
+<script>
+  function toggleReplyForm(event, commentId) {
+    event.preventDefault(); 
+    const form = document.getElementById(`reply-form-${commentId}`);
+    if (form.style.display === "none" || form.style.display === "") {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  }
+</script>
 
 </body>
 {% endblock %}

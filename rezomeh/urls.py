@@ -13,7 +13,7 @@ from .views import (AboutMeView,
                     download_cv,
                    
                     )
-handler500 = "your_app.views.custom_server_error"
+handler500 = "rezomeh.views.custom_server_error"
 
 urlpatterns =  [
     path('', HomeView.as_view(), name='home'),

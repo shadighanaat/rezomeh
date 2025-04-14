@@ -1,11 +1,14 @@
 {% extends "_base.html" %}
 {% load static %}
-{% load i18n %}
 
+{% load i18n %}
+{% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block title %}{% trans 'portfolio detail' %}{% endblock title %}
 {% block content %}
 {% include 'header.html' %} 
+
 <body>
    
     <div id="portfolio-page" class="portfolio-page-content" dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
@@ -27,16 +30,12 @@
                             <img src="{{ portfolio.image.url }}" alt="">
                         </div>
                     </div>
-    
+                    
                     <div class="portfolio-page-video embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="{{ portfolio.video_file }}"></iframe>
+                        <video class="embed-responsive-item" controls>
+                          <source src="{{ portfolio.video_file.url }}" type="video/mp4">
+                        </video>
                     </div>
-    
-                    <!--
-                    <div class="portfolio-page-image">
-                        <img src="images/portfolio/portfolio_details/1_1.jpg" alt="">
-                    </div>
-                    -->
     
                     <script type="text/javascript">
                         jQuery(document).ready(function($){
@@ -60,18 +59,35 @@
                     </div>
                   
                     <ul class="project-general-info">
-                        <li><p><i class="fa fa-user"></i>{{ portfolio.title }}</p></li>
+                        <li><p><i class="fa fa-user"></i>  
+                            {% if LANGUAGE_CODE == "fa" %}
+                              {{ portfolio.title_fa }}
+                            {% else %}
+                              {{ portfolio.title_en }}
+                            {% endif %}</p>
+                        </li>
                         <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">{{ portfolio.slug }}</a></p></li>
-                        <li><p><i class="fa fa-calendar"></i> {{ portfolio.datetime_created }}</p></li>
+                        <li><p><i class="fa fa-calendar"></i> {{ portfolio.datetime_created|to_jalali:'%y/%m/%d _ %H:%M:%S'|translate_number }}</p></li>
                     </ul>
     
-                    <p class="text-justify">{{ portfolio.description }}</p>
+                    <p class="text-justify">  
+                        {% if LANGUAGE_CODE == "fa" %}
+                           {{ portfolio.description_fa }}
+                        {% else %}
+                           {{ portfolio.description_en }}
+                        {% endif %}</p>
                     <!-- /Project Description -->
     
                     <!-- Technology -->
                     <div class="tags-block">
                         <div class="block-title">
-                            <h3>{{ portfolio.technology }}</h3>
+                            <h3>
+                            {% if LANGUAGE_CODE == "fa" %}
+                                {{ portfolio.technology_fa }}
+                            {% else %}
+                                {{ portfolio.technology_en }}
+                            {% endif %}
+                            </h3>
                         </div>
                     </div>
                     <!-- /Technology -->
@@ -81,8 +97,8 @@
                         <div class="block-title">
                             <h3>{% trans 'Share' %}</h3>
                         </div>
-                        <a href="{{ portfolio.github_link_django }}" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
-                        <a class="tip social-button" href="https://www.linkedin.com/in/shadi-ghanaati-b2880229a/" title="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{ portfolio.github_link_django }}" target="_blank" class="btn"><i class="fab fa-github"></i> </a>
+                        <a class="tip social-button" href="https://www.linkedin.com/in/shadi-ghanaati-b2880229a/" title="linkedin"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <!-- /Share Buttons -->
                 </div>

@@ -1,7 +1,9 @@
 {% extends "_base.html" %}
 {% load static %}
-{% load i18n %}
 
+{% load i18n %}
+{% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block title %}{% trans 'blog list' %}{% endblock title %}
 {% block content %}
@@ -23,7 +25,7 @@
                   <div class="media-block">
                     <a href="{% url 'blog_detail' blog.id %}">
                       <img class="post-image img-responsive" src="{{ blog.image.url }}" alt="" />
-                      <div class="post-date"><span class="day"></span><span class="month">{{ blog.datetime_created}}</span><!--<span class="year">2016</span>--></div>
+                      <div class="post-date"><span class="day"></span><span class="month">{{ blog.datetime_created|to_jalali:'%y/%m/%d _ %H:%M:%S'|translate_number }}</span><!--<span class="year">2016</span>--></div>
                     </a>
                   </div>
                   <div class="post-info">

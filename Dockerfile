@@ -6,15 +6,16 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND=noninteractive
 
-
 # Set the working directory
 WORKDIR /code
 
-# Install dependencies
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends \
+# Install system dependencies (including pkg-config)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    pkg-config \
+    default-libmysqlclient-dev \
+    libmariadb-dev \
+    libpq-dev \
     libglib2.0-0 \
     libpango-1.0-0 \
     libpangocairo-1.0-0 \
@@ -24,5 +25,9 @@ RUN apt-get update && apt-get upgrade -y && \
     tzdata \
     && rm -rf /var/lib/apt/lists/*
 
+# Copy and install Python dependencies
+COPY requirements.txt /code/
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# Copy project files
 COPY . /code/

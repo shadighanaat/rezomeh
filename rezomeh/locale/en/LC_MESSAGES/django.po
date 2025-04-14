@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-22 11:44-0600\n"
+"POT-Creation-Date: 2025-04-09 09:58+0330\n"
 "PO-Revision-Date: 2025-02-24 06:27-0600\n"
 "Last-Translator:   <shadighanaati@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,422 +19,424 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: templates/_base.html:10
-msgid "site me"
-msgstr ""
-
-#: templates/_base.html:59 rezomeh/templates/rezomeh/home_list.html:21
-msgid "Shadi Ghanaati"
-msgstr ""
-
-#: templates/_base.html:60
-msgid "Backend Developer"
-msgstr ""
-
-#: templates/_base.html:69
-msgid "Home"
-msgstr ""
-
-#: templates/_base.html:72
-msgid "About me"
-msgstr ""
-
-#: templates/_base.html:75 rezomeh/templates/rezomeh/rezomeh_list.html:14
-msgid "Resume"
-msgstr ""
-
-#: templates/_base.html:78 rezomeh/templates/rezomeh/portfolio_list.html:14
-msgid "Portfolio"
-msgstr ""
-
-#: templates/_base.html:81 rezomeh/templates/rezomeh/blog_list.html:14
-msgid "Blog"
-msgstr ""
-
-#: templates/_base.html:84 rezomeh/templates/rezomeh/contact_list.html:16
-msgid "Contact"
-msgstr ""
-
-#: templates/_base.html:90
-msgid "Switch to English"
-msgstr ""
-
-#: templates/_base.html:92
-msgid "Switch to Persian"
-msgstr ""
-
-#: templates/_base.html:115
-msgid "shadi ghanaati"
-msgstr ""
-
-#: rezomeh/forms.py:11
-msgid "Name"
-msgstr ""
-
-#: rezomeh/forms.py:12
-msgid "Email"
-msgstr ""
-
-#: rezomeh/forms.py:13
-msgid "Message"
-msgstr ""
-
-#: rezomeh/models.py:14
+#: .\forms.py:6 .\models.py:14
 msgid "name"
 msgstr "Name"
 
-#: rezomeh/models.py:15
+#: .\forms.py:7
+msgid "message"
+msgstr ""
+
+#: .\forms.py:16
+msgid "Name"
+msgstr ""
+
+#: .\forms.py:17
+msgid "Email"
+msgstr ""
+
+#: .\forms.py:18
+msgid "Message"
+msgstr ""
+
+#: .\models.py:15
 msgid "expertise"
 msgstr ""
 
-#: rezomeh/models.py:16 rezomeh/templates/rezomeh/home_list.html:34
+#: .\models.py:16 .\templates\rezomeh\home_list.html:36
 msgid "Address"
 msgstr "Address"
 
-#: rezomeh/models.py:17
+#: .\models.py:17
 msgid "phone_number"
 msgstr ""
 
-#: rezomeh/models.py:18
+#: .\models.py:18
 msgid "email"
 msgstr ""
 
-#: rezomeh/models.py:23
+#: .\models.py:23
 msgid "freelance_status"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:6
+#: .\templates\errors\500.html:5
+msgid "Something went wrong!"
+msgstr ""
+
+#: .\templates\errors\500.html:6
+msgid "An error occurred. Please try again later."
+msgstr ""
+
+#: .\templates\rezomeh\aboutme_list.html:6
 msgid "aboutme"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:14
+#: .\templates\rezomeh\aboutme_list.html:18
 msgid "About Me"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:15
-msgid "backend, Thinker, Creative Doer"
+#: .\templates\rezomeh\aboutme_list.html:19
+msgid "Creative Doer, backend, Thinker"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:26
+#: .\templates\rezomeh\aboutme_list.html:30
 msgid "aboutme.title"
 msgstr "Django Backend Developer"
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:27
+#: .\templates\rezomeh\aboutme_list.html:31
 msgid "aboutme.description"
 msgstr ""
-"I'm a Django backend developer with experience in building and deploying web applications using Django, Django REST Framework (DRF), Docker, and PostgreSQL. I have developed multiple projects, including an e-commerce website (Jetshop Store) and an online learning management system (LMS), showcasing my skills in backend development, API design, and database management.\n"
+"I'm a Django backend developer with experience in building and deploying web "
+"applications using Django, Django REST Framework (DRF), Docker, and "
+"PostgreSQL. I have developed multiple projects, including an e-commerce "
+"website (Jetshop Store) and an online learning management system (LMS), "
+"showcasing my skills in backend development, API design, and database "
+"management.\n"
 "Projects\n"
 "\n"
 "🔹 Jetshop Store (E-commerce Website) - Django & PostgreSQL\n"
-"A fully functional e-commerce platform where users can browse products, manage their shopping cart, and place orders.\n"
+"A fully functional e-commerce platform where users can browse products, "
+"manage their shopping cart, and place orders.\n"
 "\n"
 "    Features: User authentication, shopping cart, order management\n"
 "    Tech stack: Django, PostgreSQL, Docker\n"
 "\n"
 "🔹 E-commerce API - Django REST Framework (DRF)\n"
-"A RESTful API for an online store, developed using DRF to handle product listings, user authentication, shopping cart, and order processing.\n"
+"A RESTful API for an online store, developed using DRF to handle product "
+"listings, user authentication, shopping cart, and order processing.\n"
 "\n"
-"    Features: Token-based authentication, API endpoints for product & order management\n"
+"    Features: Token-based authentication, API endpoints for product & order "
+"management\n"
 "    Tech stack: Django, DRF, PostgreSQL\n"
 "\n"
 "🔹 LMS (Learning Management System) - Django & DRF\n"
-"A backend system for an online learning platform that allows users to register, enroll in courses, and track their progress.\n"
+"A backend system for an online learning platform that allows users to "
+"register, enroll in courses, and track their progress.\n"
 "\n"
 "    Features: Course creation, student enrollment, progress tracking\n"
 "    Tech stack: Django, DRF, PostgreSQL\n"
 "\n"
 "All projects are available on (https://github.com/shadighanaat)"
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:36
+#: .\templates\rezomeh\aboutme_list.html:40
 msgid "Testimonials"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:44
+#: .\templates\rezomeh\aboutme_list.html:48
 msgid ""
 "Python Programming Certificate: (Coding course and school in 2023 and 2024)"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:56
+#: .\templates\rezomeh\aboutme_list.html:60
 msgid "Django Framework Training: (Coding course and school in 2023 and 2024)"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:67
+#: .\templates\rezomeh\aboutme_list.html:71
 msgid "Git Version Control: (Coding course and school in 2023 and 2024)"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:79
+#: .\templates\rezomeh\aboutme_list.html:83
 msgid "Services"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:87
+#: .\templates\rezomeh\aboutme_list.html:91
 msgid "Development and implementation of custom websites"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:88
+#: .\templates\rezomeh\aboutme_list.html:92
 msgid "aboutme.description 1"
 msgstr ""
-"Design and develop custom websites with Django and the Django REST "
-"Framework."
+"Design and develop custom websites with Django and the Django REST Framework."
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:97
+#: .\templates\rezomeh\aboutme_list.html:101
 msgid "Implementation of online learning management systems (LMS)"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:98
+#: .\templates\rezomeh\aboutme_list.html:102
 msgid "aboutme.description 2"
 msgstr ""
 "Design and implementation of educational platforms including course, test, "
 "and grade management"
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:107
+#: .\templates\rezomeh\aboutme_list.html:111
 msgid "Online store design"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:108
+#: .\templates\rezomeh\aboutme_list.html:112
 msgid "aboutme.description 3"
 msgstr ""
-"Implementing order management, online payment, and product management "
-"systems"
+"Implementing order management, online payment, and product management systems"
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:117
+#: .\templates\rezomeh\aboutme_list.html:121
 msgid "Launching and deploying projects"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:118
+#: .\templates\rezomeh\aboutme_list.html:122
 msgid "aboutme.description 4"
 msgstr ""
 "Configure and deploy projects on dedicated servers, VPS or cloud services "
 "(such as Liara). Use Docker for development and deployment."
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:127
+#: .\templates\rezomeh\aboutme_list.html:131
 msgid "Fun Facts"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:133
+#: .\templates\rezomeh\aboutme_list.html:137
 msgid "Working Hours"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:134
+#: .\templates\rezomeh\aboutme_list.html:138
 msgid "~2000+ hours spent on coding"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:141
+#: .\templates\rezomeh\aboutme_list.html:145
 msgid "Coffee Consumed"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/aboutme_list.html:142
+#: .\templates\rezomeh\aboutme_list.html:146
 msgid " ~500+ cups (and still counting ☕)"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/blog_detail.html:15
+#: .\templates\rezomeh\blog_detail.html:18
 msgid "blog detail"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/blog_detail.html:49
+#: .\templates\rezomeh\blog_detail.html:69
 msgid "Comments"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/blog_detail.html:74
+#: .\templates\rezomeh\blog_detail.html:87
+msgid "Reply"
+msgstr ""
+
+#: .\templates\rezomeh\blog_detail.html:104
+msgid "Submit reply"
+msgstr ""
+
+#: .\templates\rezomeh\blog_detail.html:116
 msgid "Leave a Comment"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/blog_detail.html:79
-msgid "Add comment"
+#: .\templates\rezomeh\blog_detail.html:122
+msgid "Submit comment"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/blog_list.html:6
+#: .\templates\rezomeh\blog_list.html:6
 msgid "blog list"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/blog_list.html:15
+#: .\templates\rezomeh\blog_list.html:15
+msgid "Blog"
+msgstr ""
+
+#: .\templates\rezomeh\blog_list.html:16
 msgid "My Diary"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:8
+#: .\templates\rezomeh\contact_list.html:8
 msgid "contact"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:17
-#: rezomeh/templates/rezomeh/contact_list.html:23
+#: .\templates\rezomeh\contact_list.html:17
+msgid "Contact"
+msgstr ""
+
+#: .\templates\rezomeh\contact_list.html:18
+#: .\templates\rezomeh\contact_list.html:24
 msgid "Get in Touch"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:25
+#: .\templates\rezomeh\contact_list.html:26
 msgid ""
 "You can contact me via email or LinkedIn for further cooperation and "
 "communication."
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:31
+#: .\templates\rezomeh\contact_list.html:32
 msgid "Iran, Esfahan"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:39
+#: .\templates\rezomeh\contact_list.html:40
 msgid "shadighanaati@gmail.com"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:55
+#: .\templates\rezomeh\contact_list.html:56
 msgid "Freelance Available"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/contact_list.html:68
+#: .\templates\rezomeh\contact_list.html:63
+msgid "Contact Form"
+msgstr ""
+
+#: .\templates\rezomeh\contact_list.html:69
 msgid "submit"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:6
+#: .\templates\rezomeh\home_list.html:6
 msgid "home"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:24
-#: rezomeh/templates/rezomeh/rezomeh_list.html:54
+#: .\templates\rezomeh\home_list.html:23
+msgid "Shadi Ghanaati"
+msgstr ""
+
+#: .\templates\rezomeh\home_list.html:26
+#: .\templates\rezomeh\rezomeh_list.html:55
 msgid "Django"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:27
+#: .\templates\rezomeh\home_list.html:29
 msgid "backend-developer"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:33
+#: .\templates\rezomeh\home_list.html:35
 msgid "Age"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:34
-#| msgid "Address"
+#: .\templates\rezomeh\home_list.html:36
 msgid "home.Address"
 msgstr "Iran_Esfahan"
 
-#: rezomeh/templates/rezomeh/home_list.html:35
+#: .\templates\rezomeh\home_list.html:37
 msgid "e-mail"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:35
+#: .\templates\rezomeh\home_list.html:37
 msgid "home.email"
 msgstr "shadighanaati@gmail.com"
 
-#: rezomeh/templates/rezomeh/home_list.html:36
+#: .\templates\rezomeh\home_list.html:38
 msgid "Phone"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:36
+#: .\templates\rezomeh\home_list.html:38
 msgid "home.phone"
 msgstr "09132880557"
 
-#: rezomeh/templates/rezomeh/home_list.html:37
+#: .\templates\rezomeh\home_list.html:39
 msgid "Freelance"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/home_list.html:37
+#: .\templates\rezomeh\home_list.html:39
 msgid "home.Available"
 msgstr "Freelance"
 
-#: rezomeh/templates/rezomeh/portfolio_detail.html:6
+#: .\templates\rezomeh\portfolio_detail.html:8
 msgid "portfolio detail"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_detail.html:20
+#: .\templates\rezomeh\portfolio_detail.html:24
 msgid "Portfolio Project"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_detail.html:58
+#: .\templates\rezomeh\portfolio_detail.html:58
 msgid "Description"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_detail.html:81
+#: .\templates\rezomeh\portfolio_detail.html:98
 msgid "Share"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_list.html:6
+#: .\templates\rezomeh\portfolio_list.html:6
 msgid "portfolio"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_list.html:15
+#: .\templates\rezomeh\portfolio_list.html:15
+msgid "Portfolio"
+msgstr ""
+
+#: .\templates\rezomeh\portfolio_list.html:16
 msgid "My Best Works"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_list.html:23
+#: .\templates\rezomeh\portfolio_list.html:24
 msgid "All"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_list.html:24
+#: .\templates\rezomeh\portfolio_list.html:25
 msgid "Personal"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_list.html:25
+#: .\templates\rezomeh\portfolio_list.html:26
 msgid "Store"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/portfolio_list.html:26
-#: rezomeh/templates/rezomeh/rezomeh_list.html:59
+#: .\templates\rezomeh\portfolio_list.html:27
+#: .\templates\rezomeh\rezomeh_list.html:60
 msgid "Python"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:6
+#: .\templates\rezomeh\rezomeh_list.html:6
 msgid "rezomeh"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:15
+#: .\templates\rezomeh\rezomeh_list.html:15
+msgid "Resume"
+msgstr ""
+
+#: .\templates\rezomeh\rezomeh_list.html:16
 msgid "2 Years of Experience"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:21
+#: .\templates\rezomeh\rezomeh_list.html:22
 msgid "Education"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:26
+#: .\templates\rezomeh\rezomeh_list.html:27
 msgid "2011"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:27
+#: .\templates\rezomeh\rezomeh_list.html:28
 msgid "Bachelors Degree in Chemical Engineering"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:28
+#: .\templates\rezomeh\rezomeh_list.html:29
 msgid "Shahreza University"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:29
+#: .\templates\rezomeh\rezomeh_list.html:30
 msgid "Chemical engineering"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:36
+#: .\templates\rezomeh\rezomeh_list.html:37
 msgid "Experience"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:41
+#: .\templates\rezomeh\rezomeh_list.html:42
 msgid "2023"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:42
+#: .\templates\rezomeh\rezomeh_list.html:43
 msgid "Django Developer"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:43
+#: .\templates\rezomeh\rezomeh_list.html:44
 msgid " Freelance"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:44
+#: .\templates\rezomeh\rezomeh_list.html:45
 msgid ""
 "Design and develop web applications using Django Create APIs with Django "
 "REST Framework Implement authentication and authorization systems Manage "
 "databases using PostgreSQL and implement efficient database queries"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:51
+#: .\templates\rezomeh\rezomeh_list.html:52
 msgid "Design Skills"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:64
+#: .\templates\rezomeh\rezomeh_list.html:65
 msgid "Git"
 msgstr ""
 
-#: rezomeh/templates/rezomeh/rezomeh_list.html:74
+#: .\templates\rezomeh\rezomeh_list.html:75
 msgid "Download CV"
 msgstr ""
 
-#: rezomeh/views.py:91
+#: .\views.py:93
 msgid "Email successfully created"
 msgstr ""
 
-#: rezomeh/views.py:113
+#: .\views.py:120
 msgid "Comment successfully created"
 msgstr ""

@@ -7,9 +7,9 @@
 {% block content %}
 {% include 'header.html' %} 
 <body>
- 
+
   <!-- Home Subpage -->
-  <section id="page-1" class="pt-page pt-page-1 section-with-bg section-paddings-0"
+  <section id="page-1" class="pt-page-1 section-with-bg section-paddings-0"
   data-id="home" dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" 
   align="{% if LANGUAGE_CODE == 'fa' %}right{% else %}left{% endif %}">
 
@@ -34,7 +34,7 @@
           <ul class="info-list">
               <li><span class="title">{% trans 'Age' %}</span><span class="value">31</span></li>
               <li><span class="title">{% trans 'Address' %}</span><span class="value">{% trans 'home.Address' %}</span></li>
-              <li><span class="title">{% trans 'e-mail' %}</span><span class="value"><a href="mailto:email@example.com">{% trans 'home.email' %}</a></span></li>
+              <li><span class="title">{% trans 'e-mail' %}</span><span class="value">{% trans 'home.email' %}</span></li>
               <li><span class="title">{% trans 'Phone' %}</span><span class="value">{% trans 'home.phone' %}</span></li>
               <li><span class="title">{% trans 'Freelance' %}</span><span class="value available">{% trans 'home.Available' %}</span></li>
           </ul>

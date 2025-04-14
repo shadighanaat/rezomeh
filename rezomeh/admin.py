@@ -25,24 +25,24 @@ class ServiseAdmin(admin.ModelAdmin):
 
 @admin.register(Rezomeh)
 class RezomehAdmin(admin.ModelAdmin):
-    list_display = ['title', ] 
+    list_display = ['title_en', ] 
 
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['title', ]      
+    list_display = ['title_en', ]      
 
 
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("title",)}
-    list_display = ['title', 'category', 'technology', ]  
+    prepopulated_fields = {"slug": ("title_en",)}
+    list_display = ['title_en', 'category', 'technology_en', ]  
 
 
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['title', 'technology', 'author', ] 
+    list_display = ['title_en', 'technology_en', 'author', ] 
 
     inlines = [
         CommentsInline,

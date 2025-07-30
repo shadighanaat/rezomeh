@@ -412,8 +412,6 @@ msgid " Freelance"
 msgstr "آزادکار"
 
 #: .\rezomeh\templates\rezomeh\rezomeh_list.html:45
-#, fuzzy
-#| msgid "rezomeh"
 msgid "rezomeh.html"
 msgstr ""
        "طراحی و توسعه برنامه‌های وب با استفاده از جنگو،"

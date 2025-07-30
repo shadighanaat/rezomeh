@@ -154,7 +154,7 @@ msgstr "آموزش جنگو: (دوره کدنویسی در سال 2023 و 2024)"
 
 #: .\rezomeh\templates\rezomeh\aboutme_list.html:71
 msgid "Git Version Control: (Coding course and school in 2023 and 2024)"
-msgstr "Git: (دوره برنامه نویسی در سال 2023 و 2024)"
+msgstr "گیت: (دوره برنامه نویسی در سال 2023 و 2024)"
 
 #: .\rezomeh\templates\rezomeh\aboutme_list.html:83
 msgid "Services"
@@ -415,7 +415,10 @@ msgstr "آزادکار"
 #, fuzzy
 #| msgid "rezomeh"
 msgid "rezomeh.html"
-msgstr "طراحی و توسعه برنامه‌های وب با استفاده از جنگو، توسعه API ها با فریم‌ورک Django REST، پیاده‌سازی سیستم‌های احراز هویت"
+msgstr ""
+       "طراحی و توسعه برنامه‌های وب با استفاده از جنگو،"
+       "توسعه API ها با فریم‌ورک Django REST،"
+       "پیاده‌سازی سیستم‌های احراز هویت"
 
 #: .\rezomeh\templates\rezomeh\rezomeh_list.html:52
 msgid "Design Skills"

@@ -24,9 +24,14 @@ admin_url = os.environ.get('DJANGO_ADMIN_URL', 'admin')
 
 urlpatterns = [
     path(f'{admin_url}/', admin.site.urls),
+    path('', include('rezomeh.urls')),
     path('rezomeh/', include('rezomeh.urls')),
+
 
     
     # rosseta (i18)
     path('rosetta/', include('rosetta.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

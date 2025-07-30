@@ -23,7 +23,7 @@
             <ul id="portfolio_filters" class="portfolio-filters">
                 <li><button type="submit" name="category" value="all" class="btn btn-sm btn-link {% if request.GET.category == 'all' %}active{% endif %}">{% trans 'All' %}</button></li>
                 <li><button type="submit" name="category" value="personal" class="btn btn-sm btn-link {% if request.GET.category == 'personal' %}active{% endif %}">{% trans 'Personal' %}</button></li>
-                <li><button type="submit" name="category" value="store" class="btn btn-sm btn-link {% if request.GET.category == 'django' %}active{% endif %}">{% trans 'django' %}</button></li>
+                <li><button type="submit" name="category" value="store" class="btn btn-sm btn-link {% if request.GET.category == 'store' %}active{% endif %}">{% trans 'Django' %}</button></li>
                 <li><button type="submit" name="category" value="python" class="btn btn-sm btn-link {% if request.GET.category == 'python' %}active{% endif %}">{% trans 'Python' %}</button></li>
             </ul>
         </form>

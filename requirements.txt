@@ -50,3 +50,5 @@ virtualenv==20.26.6
 weasyprint==64.0
 webencodings==0.5.1
 zopfli==0.2.3.post1
+whitenoise>=6.0
+

@@ -154,5 +154,5 @@ def download_cv(request):
     return response
 
 
-def custom_server_error(request):
-    return render(request, "errors/500.html", status=500)
+def health_check(request):
+    return HttpResponse("OK")

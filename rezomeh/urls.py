@@ -11,9 +11,8 @@ from .views import (AboutMeView,
                     contact_view,
                     switch_language,
                     download_cv,
-                   
+
                     )
-handler500 = "rezomeh.views.custom_server_error"
 
 urlpatterns =  [
     path('', HomeView.as_view(), name='home'),

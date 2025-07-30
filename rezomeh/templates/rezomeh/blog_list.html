@@ -29,7 +29,7 @@
                     </a>
                   </div>
                   <div class="post-info">
-                  <a href="blog-post-1.html"><h4 class="blog-item-title">
+                  <a href="{% url 'blog_detail' blog.id %}"><h4 class="blog-item-title">
                     {% if LANGUAGE_CODE == "fa" %}
                       {{ blog.title_fa }}
                     {% else %}

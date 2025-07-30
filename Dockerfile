@@ -23,11 +23,21 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libffi-dev \
     libcairo2 \
     tzdata \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy and install Python dependencies
 COPY requirements.txt /code/
+
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy project files
 COPY . /code/
+
+# Copy .env file (optional; usually done via volumes or `.dockerignore`)
+COPY .env /code/
+
+# Collect static files
+RUN python manage.py collectstatic --noinput
+
+CMD ["gunicorn", "rezome.wsgi:application", "--bind", "0.0.0.0:8000", "--static-dir", "/usr/src/app/staticfiles"]

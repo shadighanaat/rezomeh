@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-31 01:24+0330\n"
+"POT-Creation-Date: 2025-07-31 01:42+0330\n"
 "PO-Revision-Date: 2025-02-24 06:27-0600\n"
 "Last-Translator:   <shadighanaati@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -291,7 +291,7 @@ msgstr ""
 
 #: .\rezomeh\templates\rezomeh\home_list.html:26
 #: .\rezomeh\templates\rezomeh\portfolio_list.html:26
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:57
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:55
 msgid "Django"
 msgstr ""
 
@@ -364,7 +364,7 @@ msgid "Personal"
 msgstr ""
 
 #: .\rezomeh\templates\rezomeh\portfolio_list.html:27
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:62
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:60
 msgid "Python"
 msgstr ""
 
@@ -412,23 +412,27 @@ msgstr ""
 msgid " Freelance"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:54
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:45
+msgid "rezomeh.html"
+msgstr "Designing and developing web applications using Django, developing APIs with Django REST Framework, implementing authentication systems"
+
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:52
 msgid "Design Skills"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:67
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:65
 msgid "Git"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:71
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:69
 msgid "Docker"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:75
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:73
 msgid "PostgreSQL"
 msgstr ""
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:85
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:83
 msgid "Download CV"
 msgstr ""
 

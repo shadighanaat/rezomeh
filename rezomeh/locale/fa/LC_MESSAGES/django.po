@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-31 01:24+0330\n"
+"POT-Creation-Date: 2025-07-31 01:42+0330\n"
 "PO-Revision-Date: 2025-04-09 01:30-0500\n"
 "Last-Translator:   <shadighanaati@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -290,7 +290,7 @@ msgstr "خانه"
 
 #: .\rezomeh\templates\rezomeh\home_list.html:26
 #: .\rezomeh\templates\rezomeh\portfolio_list.html:26
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:57
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:55
 msgid "Django"
 msgstr "جنگو"
 
@@ -363,7 +363,7 @@ msgid "Personal"
 msgstr "شخصی"
 
 #: .\rezomeh\templates\rezomeh\portfolio_list.html:27
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:62
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:60
 msgid "Python"
 msgstr "پایتون"
 
@@ -411,23 +411,29 @@ msgstr "توسعه دهنده جنگو"
 msgid " Freelance"
 msgstr "آزادکار"
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:54
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:45
+#, fuzzy
+#| msgid "rezomeh"
+msgid "rezomeh.html"
+msgstr "طراحی و توسعه برنامه‌های وب با استفاده از جنگو، توسعه API ها با فریم‌ورک Django REST، پیاده‌سازی سیستم‌های احراز هویت"
+
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:52
 msgid "Design Skills"
 msgstr "مهارت های طراحی"
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:67
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:65
 msgid "Git"
 msgstr "گیت"
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:71
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:69
 msgid "Docker"
 msgstr "داکر"
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:75
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:73
 msgid "PostgreSQL"
 msgstr "دیتابیس"
 
-#: .\rezomeh\templates\rezomeh\rezomeh_list.html:85
+#: .\rezomeh\templates\rezomeh\rezomeh_list.html:83
 msgid "Download CV"
 msgstr "دانلود CV"
 
